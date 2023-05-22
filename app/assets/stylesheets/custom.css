@@ -1,0 +1,121 @@
+.marquee{
+  width: 100%;
+  justify-content: center;
+}
+.marquee h5{
+  font-family: verdana;
+
+}
+
+.h1{
+    text-align: center;
+}
+.head{
+    text-align: center;
+}
+
+.movie-main{
+  width: 400px;
+  height: 298px;
+/* border: 1px solid black;*/
+  margin: 6px;
+/*  border-radius: 20px;*/
+}
+
+.movie-image{
+  width: 385px;
+  height: 220px;
+  border-radius: 20px;
+}
+
+.movie-data{
+  margin: 10px;
+}
+
+.show-img{
+  width: 500px;
+  margin-right:50px;
+  border-radius: 10px 40px;
+}
+.lead{
+  text-align: center;
+}
+.show-data{
+  margin-top: 30px;
+}
+.lead{
+  margin: 20px;
+}
+.button{
+  text-align: center;
+}
+.auto-text{
+  text-align: center;
+  font-size: xx-large;
+}
+.add-button{
+  text-align: center;
+  margin-top: 10px;
+}
+.form-container{
+  border: 1px solid black;
+  margin-right: 400px;
+  margin-left: 500px;
+  border-radius: 50px 2px;
+  
+
+}
+.form-img{
+  margin-left: 45px;
+}
+.new-movie{
+ text-align: center;
+}
+.container{
+  margin-left: 80px;
+
+}
+.form-sub{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.home-img1{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.home-img2{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.app-body{
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+}
+.card-1{
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10;
+
+}
+.para-1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.card-2{
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10PX;
+  border-radius: 10PX;
+}
+.para-2{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 17px;
+}
+

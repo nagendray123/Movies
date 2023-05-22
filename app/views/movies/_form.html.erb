@@ -1,0 +1,39 @@
+<div class="form-container">
+<%=form_with model: @movie do |form| %>
+
+<div class="form-group">
+	<%=form.label :movie_name %><br>
+	<%=form.text_field :movie_name%>
+</div>
+
+<div>
+ <%= form.label :movie_language %><br>
+ <%= form.text_field :movie_language %>
+</div>
+
+<div>
+	<%= form.label :movie_hours %><br>
+	<%= form.text_field :movie_hours %>
+</div>
+
+<div>
+	<%= form.label :movie_type %><br>
+	<%= form.text_field :movie_type %>
+</div>
+ 
+<div>
+	<%= form.label :movie_release_date %><br>
+	<%= form.text_field :movie_release_date %>
+</div>
+<br>
+<div class="form-img">
+	<%= form.file_field :image %>
+</div>
+<br>
+
+<div class="form-sub">
+	<%= form.submit class:"btn btn-dark" %>
+</div>
+
+<% end %>
+</div>

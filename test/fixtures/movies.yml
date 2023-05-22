@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_name: MyString
+  movie_language: MyString
+  movie_hours: MyString
+  movie_type: MyString
+  movie_release_date: MyString
+
+two:
+  movie_name: MyString
+  movie_language: MyString
+  movie_hours: MyString
+  movie_type: MyString
+  movie_release_date: MyString

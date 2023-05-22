@@ -1,0 +1,44 @@
+<% if user_signed_in? %>
+    <div class="container">
+      <div class="row">
+        <div class="show-img">
+          <% if @movie.image.attached? %>
+            <%= image_tag @movie.image ,class:"show-img"%>
+          <% end %>
+        </div>    
+        <div class="col-6 lg-2 show-data">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>Movie-name </td>
+                <td><%= @movie.movie_name %></td>
+              </tr>
+              <tr>
+                <td>Movie-language </td>
+                <td><%= @movie.movie_language %></td>
+              </tr>
+              <tr> 
+                <td>Movie-hours </td>
+                <td><%= @movie.movie_hours %></td>
+              </tr>
+              <tr>              
+                <td>Movie-type </td>
+                <td><%= @movie.movie_type %></td>
+              </tr>
+              <tr>
+                <td>Movie-release-date </td>
+                <td><%= @movie.movie_release_date %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lead">
+          <%= link_to "Edit", edit_movie_path(@movie), class: "btn btn-primary" %>
+          <%= link_to "Back", movies_path, class:' btn btn-info' %>
+          <%= link_to "Destroy", movie_path(@movie), data: {turbo_method: :delete,turbo_confirm: "Are you sure delete this movie"}, class: 'btn btn-secondary'%> 
+        </div>
+      </div>
+    </div>
+  <% else %>
+<h1 style="text-align:center;">Sign in Your Account</h1>
+<% end %>

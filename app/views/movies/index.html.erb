@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
+
+<h1 class="h1">All Movies</h1>
+<div class="container">
+  <div class="row">
+    <% @movies.each do |movie| %>  
+      <div class="movie-main">
+        <% if movie.image.attached? %>
+          <%= image_tag movie.image, class:"movie-image" %>
+        <% end %>
+        <div class="auto-text">
+          
+            <%= movie.movie_name %>
+          
+        </div>
+        <div class="button">
+          <%= link_to 'View Details >>', movie, class:"btn btn-dark" %>
+        </div> 
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="add-button">
+  <%= link_to "Add Movie", new_movie_path, class: "btn btn-primary"%>
+</div>
+
+
+
+
+
+
+
+
