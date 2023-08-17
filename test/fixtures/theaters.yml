@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theater_name: MyString
+  location: MyString
+  total_number_of_screen: MyString
+  capacity: 1
+
+two:
+  theater_name: MyString
+  location: MyString
+  total_number_of_screen: MyString
+  capacity: 1

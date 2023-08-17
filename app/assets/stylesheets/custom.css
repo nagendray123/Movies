@@ -17,15 +17,13 @@
 .movie-main{
   width: 400px;
   height: 298px;
-/* border: 1px solid black;*/
   margin: 6px;
-/*  border-radius: 20px;*/
 }
 
 .movie-image{
   width: 385px;
   height: 220px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .movie-data{
@@ -62,8 +60,6 @@
   margin-right: 400px;
   margin-left: 500px;
   border-radius: 50px 2px;
-  
-
 }
 .form-img{
   margin-left: 45px;
@@ -118,4 +114,70 @@
   margin-right: 10px;
   font-size: 17px;
 }
+.booking-form{
+  text-align: center;
+  border: 1px solid black;
+  margin-right: 400px;
+  margin-left: 500px;
+  border-radius: 50px 2px;
+}
+.rows{
+  margin-left: 400px;
+  margin-right: 500px;
+  border-radius: 10px;
+  border:1px  solid black;
+}
+.rows1{
+  margin-left: 400px;
+  margin-right: 500px;
+  border-radius: 10px;
+  border:1px  solid black;
+}
+.theate-form{
+  text-align: center;
+  border: 1px solid black;
+  margin-right: 400px;
+  margin-left: 500px;
+  border-radius: 50px 2px;
+}
+.create_mailer{
+  text-align: center;
+  border-radius: 1px solid black;
+
+}
+.search{
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-right: 6px;
+}
+.search_bar{
+  border-radius: 20px;
+}
+
+.btn_left_pagination{
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  border-radius: 50px 50px;
+}
+
+.btn_right_pagination{
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  border-radius: 50px 50px;
+}
+.lead-1{
+  height: 75px;
+  width: 1350px;
+  margin-top: 1%;
+  border:1px  solid black;
+  
+}
+.tag:hover{
+  background-color: blue;
+  border-radius: 8px;
+}
+
+
 

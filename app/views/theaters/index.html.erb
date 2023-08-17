@@ -1,0 +1,17 @@
+<h1 style="text-align:center;">Select Theaters</h1>
+<ul>
+	<% @theaters.each do |theater| %>
+	<div class="lead-1">
+		<br>
+		<%= link_to theater.theater_name, theater %>
+	</div>
+	<% end %>
+</ul>
+
+   <!-- <#% if can? :admin, @theater%>	
+
+     <%#= link_to "Add Theater", new_theater_path(movie_id: @movie_id), class: "btn btn-primary"%>
+     <#%end%> -->
+
+ <!-- <%#= link_to "Booking", new_booking_path(movie_id: @movie.id), class: "btn btn-danger" %> -->
+<br>

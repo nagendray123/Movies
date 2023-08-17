@@ -1,27 +1,39 @@
 <div class="form-container">
+
 <%=form_with model: @movie do |form| %>
+
+<!-- <div class="form-group">
+	<%#=form.hidden_field :user_id %><br>
+	<%#=form.hidden_field :user_id %>
+</div> -->
+
+<!-- <div class="form-group">
+	<%#= form.label :theater%><br>
+	<%#= form.text_field :theater_id %>
+</div> -->
 
 <div class="form-group">
 	<%=form.label :movie_name %><br>
 	<%=form.text_field :movie_name%>
 </div>
+  
 
-<div>
+<div class="form-group">
  <%= form.label :movie_language %><br>
  <%= form.text_field :movie_language %>
 </div>
 
-<div>
+<div class="form-group">
 	<%= form.label :movie_hours %><br>
 	<%= form.text_field :movie_hours %>
 </div>
 
-<div>
+<div class="form-group">
 	<%= form.label :movie_type %><br>
 	<%= form.text_field :movie_type %>
 </div>
  
-<div>
+<div class="form-group">
 	<%= form.label :movie_release_date %><br>
 	<%= form.text_field :movie_release_date %>
 </div>
@@ -37,3 +49,6 @@
 
 <% end %>
 </div>
+
+
+

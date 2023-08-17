@@ -1,0 +1,30 @@
+<div class="theate-form">
+  <%= form_with model: theater do |form| %>
+
+    <!-- <div class="form-group">
+      <%#= form.hidden_field :user_id %><br>
+      <%#= form.hidden_field :user_id %><br> 
+    </div>
+ -->
+    <div class="form-group">
+      <%= form.label :theater_name %><br>
+      <%= form.text_field :theater_name %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :location %><br>
+      <%= form.text_field :location %><br> 
+    </div>
+
+    <div class="form-group">
+      <%= form.label :capacity %><br>
+      <%= form.text_field :capacity %><br>
+    </div>
+
+    <br>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  <br>
+</div>

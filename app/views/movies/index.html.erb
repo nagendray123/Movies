@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
 
 <h1 class="h1">All Movies</h1>
+
 <div class="container">
   <div class="row">
     <% @movies.each do |movie| %>  
@@ -9,21 +10,31 @@
           <%= image_tag movie.image, class:"movie-image" %>
         <% end %>
         <div class="auto-text">
-          
             <%= movie.movie_name %>
-          
         </div>
+
         <div class="button">
-          <%= link_to 'View Details >>', movie, class:"btn btn-dark" %>
+          <%= link_to 'View Details >>', movie, class:"btn btn-dark" %> 
         </div> 
       </div>
     <% end %>
+
   </div>
+    <%= link_to_prev_page @movies, '<', class:" btn btn-light btn_left_pagination" %>
+    <%= link_to_next_page @movies, '>', class:" btn btn-light btn_right_pagination" %>  
 </div>
 
-<div class="add-button">
-  <%= link_to "Add Movie", new_movie_path, class: "btn btn-primary"%>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

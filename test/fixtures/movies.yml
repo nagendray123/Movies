@@ -6,6 +6,7 @@ one:
   movie_hours: MyString
   movie_type: MyString
   movie_release_date: MyString
+  user: one
 
 two:
   movie_name: MyString
@@ -13,3 +14,4 @@ two:
   movie_hours: MyString
   movie_type: MyString
   movie_release_date: MyString
+  user: two

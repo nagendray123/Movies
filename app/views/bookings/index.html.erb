@@ -1,0 +1,10 @@
+<h1 style="text-align:center;">Booking List</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+  <li>  
+    <%= link_to booking.theater_name, booking %>
+  </li>
+  <% end %>
+</ul>
+

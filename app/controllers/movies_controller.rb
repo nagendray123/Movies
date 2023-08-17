@@ -1,6 +1,15 @@
 class MoviesController < ApplicationController
+  
+  # before_action :authenticate_user!
+  # load_and_authorize_resource
+  
   def index
-    @movies = Movie.all
+   @movies = if params[:search]
+      @movies = Movie.where("movie_name LIKE ?", "%#{params[:search]}%")
+    else
+      Movie.all
+    end
+      @movies = @movies.page(params[:page]).per(6)
   end
 
   def show
@@ -8,10 +17,12 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @movie = Movie.new
+    @movie = Movie.new(params[:id])
+    # @movie = current_user.movies.new(user_id: params[:current_user])
   end
 
   def create
+    # debugger
     @movie = Movie.new(movie_params)
 
     if @movie.save
@@ -21,7 +32,7 @@ class MoviesController < ApplicationController
     end
   end
 
-  def edit
+  def edit   
     @movie = Movie.find(params[:id])
   end
 
@@ -39,7 +50,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
 
     if @movie.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to @movie, status: :see_other
     else
       render status: :unprocessable_entity
     end  

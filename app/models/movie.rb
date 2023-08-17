@@ -1,5 +1,6 @@
 class Movie < ApplicationRecord
-  has_one  :user 
+  # belongs_to :user
+  has_many :bookings
 
   has_one_attached :image
 end

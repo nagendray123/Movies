@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="rows1"> 
+     <h1 style="text-align:center;">Cinema Hall</h1>   
+        <table class="table table-bordered">
+            <tbody>
+              <tr>
+                 <td>Theater Name </td>
+                 <td><%= @theater.theater_name %></td>
+              </tr>
+              <tr>
+                 <td>Location</td>
+                 <td><%= @theater.location %></td>
+              </tr>
+              <tr>              
+                 <td>Capacity</td>
+                 <td><%= @theater.capacity %></td>
+              </tr>
+            </tbody>
+        </table>
+       
+        <div class="lead">
+
+              <%= link_to "Booking", new_booking_path(theater_id: @theater.id), class: "btn btn-danger" %>
+
+          <%#= link_to "Booking", new_booking_path(@booking), class: "btn btn-danger" %>
+          <% if can? :admin, @theater %>
+             <%= link_to "Edit Theater", edit_theater_path(@theater), class:"btn btn-primary" %> 
+             <%= link_to "Destroy", theater_path(@theater), data: { turbo_method: :delete,turbo_confirm: "Are you sure?"}, class:"btn btn-secondary" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+            
+

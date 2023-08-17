@@ -51,6 +51,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # this gem is use to send mailer purpose.
+  gem "letter_opener"
 end
 
 group :development do
@@ -79,4 +81,18 @@ gem 'cssbundling-rails'
 
 # This gem is use to attachment file/image(active_storage).
   gem "image_processing"
+
+  
+# This gem is use to Role define in different different Role user/admin/supplier
+  gem "rolify"
+
+# This gem is use to authorization purpose in role
+  gem 'cancancan' 
+
+# This is use to pagination purpose in rails
+  gem 'kaminari' 
+
+
+# This gem is use to pagination with search are both combind.
+ # gem 'will_paginate'
   
