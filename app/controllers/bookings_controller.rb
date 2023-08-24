@@ -24,6 +24,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+
+      # NotificationMailer.create_notification(@booking).deliver_now
       
       SendingEmailJob.set(wait: 5.seconds).perform_later(@booking)
       redirect_to @booking
