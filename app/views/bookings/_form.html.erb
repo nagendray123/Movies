@@ -8,8 +8,8 @@
 
 
 	<div class="form-group">
-		<%= form.label :date %><br>
-		 <%= form.select :date, ["Select Date","14 Aug 2023", "15 Aug 2023", "16 Aug 2023", "17 Aug 2023", "18 Aug 2023", "19 Aug 2023", "20 Aug 2023"] %>
+      <%= form.label :date, "Date" %><br>
+      <%= form.date_field :date, value: Date.current %>
 
 	</div>
 

@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
     else
       Movie.all
     end
-      @movies = @movies.page(params[:page]).per(6)
+      @movies = @movies.page(params[:page]).per(9)
   end
 
   def show
