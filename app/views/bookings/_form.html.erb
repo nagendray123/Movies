@@ -1,49 +1,155 @@
-<div class="booking-form">	
+<%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
+<%= javascript_include_tag('external.js') %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div class="movie-container">
 	<%=form_with model: @booking do |form| %>
+		<div class="form-group">
+			<%=form.hidden_field :user_id %><br>
+			<%=form.hidden_field :user_id %>
+		</div>
 
-	<div class="form-group">
-		<%=form.hidden_field :user_id %><br>
-		<%=form.hidden_field :user_id %>
-	</div>
+		<div class="form-group">
+			<%=form.hidden_field :theater_id %><br>
+			<%=form.hidden_field :theater_id, value: @theater.id %>
+		</div>
+
+		<div class="form-group">
+	        <%=form.hidden_field :theater_name %><br>
+	        <%=form.hidden_field :theater_name, value: @theater.theater_name %>
+		</div>
+
+        
+		<div class="form-group">
+	      <%= form.label :date %> :
+	      <%= form.date_field :date, value: Date.current %>
+
+		</div><br>
+
+		<div class="form-group">
+			<%= form.label :time %> :
+		    <%= form.select :time, ["9:30 AM", "12:00 PM", "3:00 PM", "6:00 PM", "9:00 PM"] %>
+		</div><br>
+
+		<div class="form-group">
+		  <%= form.label :howmany_seats%> :
+	     <%= form.select :howmany_seats, [1,2,3,4,5,6,7,8,9,10] %>
+		</div><br>
 
 
-	<div class="form-group">
-      <%= form.label :date, "Date" %><br>
-      <%= form.date_field :date, value: Date.current %>
+		<div class="form-group">
+			<%= form.label :select_seats %> :
+			<%= form.text_field :select_seats %>
+		</div>
 
-	</div>
+		<div class=" movie-container1">
+			<label>Select Seats</label>
+			<select id="movie">
+				<option value="100">Premium-Rs. 100</option>
+				<option value="200">Royal-Rs. 200</option>
+				<option value="250">Luxury-Rs. 250 </option>	
+			</select>
+		</div>
 
-	<div class="form-group">
-		<%= form.label :time %><br>
-	    <%= form.select :time, ["Select Time","9:30 AM", "12:00 PM", "3:00 PM", "6:00 PM", "9:00 PM"] %>
-	</div>
-	<div class="form-group">
-	  <%= form.label :howmany_seats %><br>
-     <%= form.select :howmany_seats, [0,1,2,3,4,5,6,7,8,9,10] %>
-	</div>
+		<ul class="showcase">
+			<li>
+				<div class="seat"></div>
+				<small>Available</small>
+			</li>
 
+			<li>
+				<div class="seat selected"></div>
+				<small>Selected</small>
+			</li>	
 
-	<div class="form-group">
-		<%= form.label :select_seats %><br>
-		<%= form.text_field :select_seats %>
+			<li>
+				<div class="seat occupied"></div>
+				<small>Sold</small>
+			</li>
+		</ul>
 
-	</div>
+	    <div class="Container">
+	    	<div class="screen"></div>
+	    	<p class="head">All eyes this way to please!</p>
+	    	<div class="row">
+	    		<div class="seat">1</div>
+	    		<div class="seat">2</div>
+	    		<div class="seat sold">3</div>
+	    		<div class="seat">4</div>
+	    		<div class="seat">5</div>
+	    		<div class="seat">6</div>
+	    		<div class="seat occupied">7</div>
+	    		<div class="seat">8</div>
+	    	</div>
+	      	
+	      	<div class="row">
+	    		<div class="seat">1</div>
+	    		<div class="seat">2</div>
+	    		<div class="seat">3</div>
+	    		<div class="seat">4</div>
+	    		<div class="seat">5</div>
+	    		<div class="seat occupied">6</div>
+	    		<div class="seat">7</div>
+	    		<div class="seat">8</div>
+	    	</div>
 
-	<div class="form-group">
-		<%=form.hidden_field :theater_id %><br>
-		<%=form.hidden_field :theater_id, value: @theater.id %>
-	</div>
+	       
+	    	<div class="row">
+	    		<div class="seat occupied">1</div>
+	    		<div class="seat">2</div>
+	    		<div class="seat">3</div>
+	    		<div class="seat">4</div>
+	    		<div class="seat occupied">5</div>
+	    		<div class="seat">6</div>
+	    		<div class="seat">7</div>
+	    		<div class="seat occupied">8</div>
+	    	</div>
 
-	<div class="form-group">
-        <%=form.hidden_field :theater_name %><br>
-        <%=form.hidden_field :theater_name, value: @theater.theater_name %>
-	</div>
+	    	<div class="row">
+	    		<div class="seat">1</div>
+	    		<div class="seat">2</div>
+	    		<div class="seat">3</div>
+	    		<div class="seat occupied">4</div>
+	    		<div class="seat">5</div>
+	    		<div class="seat">6</div>
+	    		<div class="seat">7</div>
+	    		<div class="seat">8</div>
+	    	</div>
 
-	<div class="form-sub">
-		<%= form.submit class:"btn btn-secondary" %>
-	</div>
+	    	<div class="row">
+	    		<div class="seat">1</div>
+	    		<div class="seat occupied">2</div>
+	    		<div class="seat">3</div>
+	    		<div class="seat">4</div>
+	    		<div class="seat">5</div>
+	    		<div class="seat">6</div>
+	    		<div class="seat occupied">7</div>
+	    		<div class="seat">8</div>
+	    	</div>
+
+	    	<div class="row">
+	    		<div class="seat">1</div>
+	    		<div class="seat">2</div>
+	    		<div class="seat occupied">3</div>
+	    		<div class="seat occupied">4</div>
+	    		<div class="seat">5</div>
+	    		<div class="seat occupied">6</div>
+	    		<div class="seat">7</div>
+	    		<div class="seat">8</div>
+	    	</div>
+	    	
+
+	    	<p class="text">
+	    		You have selected  <span id="count">0</span> seats for price of Rs. <span id="total">0</span>
+	    	</p>
+
+	    	  <div class="form-sub">
+				<%= form.submit class:"btn btn-secondary" %>
+			</div>
+	    </div>
 	<% end %>
 </div>
-
 
 

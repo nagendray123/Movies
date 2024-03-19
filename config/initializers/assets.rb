@@ -11,3 +11,10 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules/bootstrap
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+ 
+
+
+
+# if JavaScript is not  working proper then  use this line
+# Rails.application.config.assets.precompile += %w( custom.js admin.css )

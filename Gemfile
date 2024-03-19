@@ -100,4 +100,9 @@ gem 'cssbundling-rails'
 # This gem is use to background processing purpose.
  gem 'sidekiq', '~> 6.5.9'
 
+# This gem is use to search method purpose.
+ # gem 'ransack'
+
+
+
   
