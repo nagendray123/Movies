@@ -43,21 +43,3 @@
 # start_index = 19
 # end_index = 69
 # Movie.order(:id).offset(start_index).limit(end_index - start_index + 1).destroy_all
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
